@@ -1,0 +1,136 @@
+[gd_scene load_steps=20 format=3 uid="uid://bvc7xdkt1pr0y"]
+
+[ext_resource type="Texture2D" uid="uid://bbvoof51ytme8" path="res://front.png" id="1_oai2v"]
+[ext_resource type="Script" uid="uid://byujm8oroi4g3" path="res://area_2d.gd" id="2_3vc31"]
+[ext_resource type="Texture2D" uid="uid://cs77tv4crrjuj" path="res://drzwi front.png" id="3_hwj62"]
+[ext_resource type="Texture2D" uid="uid://dqwbj30kqjyq1" path="res://hol.png" id="4_hwj62"]
+[ext_resource type="Script" uid="uid://boggpfmw34csp" path="res://drzwikuchnia.gd" id="5_pp4mp"]
+[ext_resource type="Texture2D" uid="uid://bfgte3akqh6ds" path="res://drzwikuchnia.png" id="6_l1l8c"]
+[ext_resource type="Script" uid="uid://bxvwd8x86kdtr" path="res://wyjscie.gd" id="7_ufr6j"]
+[ext_resource type="Texture2D" uid="uid://ce4ierpd7caw5" path="res://wyjscie.png" id="8_jhx2j"]
+[ext_resource type="Texture2D" uid="uid://ynxgu3tjatv8" path="res://gosc1.png" id="9_jhx2j"]
+[ext_resource type="Script" uid="uid://wjaibnfepycj" path="res://gosciu_1.gd" id="9_wgjcq"]
+[ext_resource type="Script" uid="uid://33s42qdv05jw" path="res://Popup_Menu.gd" id="11_jyuat"]
+[ext_resource type="Script" uid="uid://w67xtmw04hra" path="res://gosciu_2.gd" id="12_qm14f"]
+[ext_resource type="Texture2D" uid="uid://pp4ol81ynm22" path="res://gosc2.png" id="13_p7iww"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3vc31"]
+size = Vector2(113, 154)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l1l8c"]
+size = Vector2(104, 403.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgjcq"]
+size = Vector2(2.62125, 0.711875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jyuat"]
+size = Vector2(122.5, 121)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wgjcq"]
+bg_color = Color(0.843184, 0.843184, 0.843184, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.695503, 0.695503, 0.695503, 1)
+border_blend = true
+corner_radius_top_left = 33
+corner_radius_bottom_right = 33
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a3tb1"]
+size = Vector2(186, 186)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="domek" type="Sprite2D" parent="."]
+position = Vector2(571, 329)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("1_oai2v")
+
+[node name="drzwifront" type="Area2D" parent="."]
+position = Vector2(8, 6)
+script = ExtResource("2_3vc31")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="drzwifront"]
+position = Vector2(294.5, 404)
+shape = SubResource("RectangleShape2D_3vc31")
+
+[node name="Sprite2D2" type="Sprite2D" parent="drzwifront"]
+position = Vector2(299, 399)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("3_hwj62")
+
+[node name="hol" type="Sprite2D" parent="."]
+position = Vector2(2565, 280)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("4_hwj62")
+
+[node name="drzwikuchnia" type="Area2D" parent="."]
+script = ExtResource("5_pp4mp")
+
+[node name="Sprite2D2" type="Sprite2D" parent="drzwikuchnia"]
+position = Vector2(2251, 366)
+texture = ExtResource("6_l1l8c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="drzwikuchnia"]
+position = Vector2(2247, 367)
+shape = SubResource("RectangleShape2D_l1l8c")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(571, 322)
+
+[node name="wyjscie" type="Area2D" parent="."]
+script = ExtResource("7_ufr6j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wyjscie"]
+position = Vector2(2567, 602.187)
+scale = Vector2(200, 200)
+shape = SubResource("RectangleShape2D_wgjcq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="wyjscie"]
+position = Vector2(2570.5, 607.125)
+scale = Vector2(1.12457, 1.23031)
+texture = ExtResource("8_jhx2j")
+
+[node name="gosciu1" type="Area2D" parent="."]
+script = ExtResource("9_wgjcq")
+
+[node name="gosc1" type="Sprite2D" parent="gosciu1"]
+position = Vector2(757, 160)
+scale = Vector2(0.57874, 0.572)
+texture = ExtResource("9_jhx2j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gosciu1"]
+position = Vector2(759, 152)
+shape = SubResource("RectangleShape2D_jyuat")
+
+[node name="PopupMenu" type="PopupMenu" parent="."]
+size = Vector2i(200, 100)
+min_size = Vector2i(150, 0)
+theme_override_colors/font_color = Color(0.144063, 0.144063, 0.144063, 1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_wgjcq")
+script = ExtResource("11_jyuat")
+
+[node name="gosciu 2" type="Area2D" parent="."]
+script = ExtResource("12_qm14f")
+
+[node name="Sprite2D" type="Sprite2D" parent="gosciu 2"]
+position = Vector2(2663, 446)
+scale = Vector2(0.605058, 0.681818)
+texture = ExtResource("13_p7iww")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gosciu 2"]
+position = Vector2(2665, 435)
+shape = SubResource("RectangleShape2D_a3tb1")
+
+[connection signal="mouse_entered" from="drzwifront" to="drzwifront" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="drzwifront" to="drzwifront" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="drzwikuchnia" to="drzwifront" method="_on_drzwikuchnia_mouse_entered"]
+[connection signal="mouse_entered" from="drzwikuchnia" to="drzwikuchnia" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="drzwikuchnia" to="drzwifront" method="_on_drzwikuchnia_mouse_exited"]
+[connection signal="mouse_exited" from="drzwikuchnia" to="drzwikuchnia" method="_on_mouse_exited"]
+[connection signal="mouse_shape_entered" from="drzwikuchnia" to="drzwifront" method="_on_drzwikuchnia_mouse_shape_entered"]
+[connection signal="mouse_shape_entered" from="drzwikuchnia" to="drzwikuchnia" method="_on_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="drzwikuchnia" to="drzwifront" method="_on_drzwikuchnia_mouse_shape_exited"]
+[connection signal="mouse_entered" from="wyjscie" to="wyjscie" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="wyjscie" to="wyjscie" method="_on_mouse_exited"]

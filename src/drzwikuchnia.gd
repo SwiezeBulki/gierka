@@ -1,0 +1,16 @@
+extends Area2D
+@onready var sprite: Sprite2D = $Sprite2D2
+@onready var camera: Camera2D = $"../Camera2D"# Dostosuj ścieżkę, jeśli kamera jest gdzie indziej.
+
+func _ready():
+	sprite.visible = false
+
+func _on_mouse_entered():
+	sprite.visible = true
+
+func _on_mouse_exited():
+	sprite.visible = false
+
+func _input_event(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		camera.position.x += 2000
