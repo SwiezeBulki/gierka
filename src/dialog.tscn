@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://4esfsqcj053j"]
+
+[ext_resource type="Script" uid="uid://c4qwmtmcl1mvx" path="res://src/dialog_script.gd" id="2_0s24b"]
+[ext_resource type="Theme" uid="uid://c6f61kddef1cx" path="res://src/dialog_theme.tres" id="2_2e6nw"]
+[ext_resource type="Texture2D" uid="uid://cilsurqrerb5m" path="res://obrazki/arrow.png" id="3_86cel"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vwthd"]
+texture = ExtResource("3_86cel")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vu18f"]
+texture = ExtResource("3_86cel")
+modulate_color = Color(1, 0.38431373, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kk2ql"]
+texture = ExtResource("3_86cel")
+modulate_color = Color(0.6901961, 1, 0.39215687, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wjwsi"]
+texture = ExtResource("3_86cel")
+modulate_color = Color(0.5251013, 0.5251013, 0.5251013, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_6odqk"]
+subpixel_positioning = 0
+
+[sub_resource type="Theme" id="Theme_wjwsi"]
+default_font = SubResource("SystemFont_6odqk")
+default_font_size = 20
+
+[node name="DIalog" type="CanvasLayer" unique_id=1545965076]
+layer = 7
+visible = false
+script = ExtResource("2_0s24b")
+
+[node name="Control" type="Control" parent="." unique_id=1236570466]
+visibility_layer = 512
+layout_mode = 3
+anchor_top = 0.749
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 37.0
+offset_top = -9.35202
+offset_right = -41.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+theme = ExtResource("2_2e6nw")
+
+[node name="Box" type="Panel" parent="Control" unique_id=1380283659]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Control/Box" unique_id=1202440351]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -122.880005
+offset_top = -62.0
+offset_right = -31.880005
+offset_bottom = -21.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_vwthd")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_vu18f")
+theme_override_styles/hover = SubResource("StyleBoxTexture_kk2ql")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_wjwsi")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1888474251]
+layout_mode = 1
+offset_left = 52.6
+offset_top = 22.288025
+offset_right = 965.0
+offset_bottom = 143.28802
+theme = SubResource("Theme_wjwsi")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer" unique_id=338266689]
+layout_mode = 2
+
+[node name="Speaker" type="Label" parent="Control/VBoxContainer/HBoxContainer" unique_id=263518349]
+layout_mode = 2
+size_flags_horizontal = 0
+localize_numeral_system = false
+layout_direction = 2
+text = "Gosć 1"
+
+[node name="day" type="Label" parent="Control/VBoxContainer/HBoxContainer" unique_id=2111895335]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+offset_transform_position = Vector2(40, 0)
+layout_direction = 3
+text = "dzien 1"
+
+[node name="dialog" type="RichTextLabel" parent="Control/VBoxContainer" unique_id=394525958]
+layout_mode = 2
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lacinia tellus id metus pellentesque, ut vestibulum elit porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+fit_content = true
+
+[connection signal="pressed" from="Control/Box/Button" to="." method="_on_button_pressed"]

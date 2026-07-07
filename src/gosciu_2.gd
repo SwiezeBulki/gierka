@@ -1,11 +1,13 @@
 
 extends "res://src/ludkimenu.gd"
+var day = 1
+var Speaker = "Gosciu 2"
 
 func talk():
-	print("o kurwa FBI")
+	DialogManager.display_line(Speaker,day,"o kurwa FBI")
 
 func help():
-	print("czy chcesz pomoc gosciowi2 w holu")
+	DialogManager.display_line(Speaker,day,"czy chcesz pomoc gosciowi2 w holu")
 
 func order():
-	print("co ma zrobic gosciu2?")
+	DialogManager.display_line(Speaker,day, "co ma zrobic gosciu2?")
