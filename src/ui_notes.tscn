@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://fivqeared447"]
 
-[ext_resource type="Script" uid="uid://gkt532egtn4a" path="res://Notes.gd" id="1_2oowo"]
+[ext_resource type="Script" uid="uid://gkt532egtn4a" path="res://src/Notes.gd" id="1_2oowo"]
 [ext_resource type="Texture2D" uid="uid://c0aqtw5hl8lw5" path="res://obrazki/notes.png" id="2_4jdak"]
 
 [node name="UInotes" type="CanvasLayer" unique_id=534908783]
