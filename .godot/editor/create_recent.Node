@@ -1,10 +1,11 @@
+Button
+RichTextLabel
+TextureRect
 Control
 CanvasLayer
 CanvasGroup
 HBoxContainer
 Label
-Button
-RichTextLabel
 VBoxContainer
 Panel
 SubViewport
