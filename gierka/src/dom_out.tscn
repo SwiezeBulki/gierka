@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://bvc7xdkt1pr0y"]
+
+[ext_resource type="Texture2D" uid="uid://bbvoof51ytme8" path="res://obrazki/front.png" id="1_pdmda"]
+[ext_resource type="Script" uid="uid://byujm8oroi4g3" path="res://src/drzwifront.gd" id="2_idohv"]
+[ext_resource type="Texture2D" uid="uid://cs77tv4crrjuj" path="res://obrazki/drzwi front.png" id="3_he4n6"]
+[ext_resource type="Script" uid="uid://wjaibnfepycj" path="res://src/gosciu_1.gd" id="4_r10qw"]
+[ext_resource type="Texture2D" uid="uid://ynxgu3tjatv8" path="res://obrazki/gosc1.png" id="5_1p4j6"]
+[ext_resource type="Script" uid="uid://33s42qdv05jw" path="res://src/Popup_Menu.gd" id="6_5ob16"]
+[ext_resource type="PackedScene" uid="uid://4esfsqcj053j" path="res://src/dialog.tscn" id="7_idohv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3vc31"]
+size = Vector2(113, 154)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jyuat"]
+size = Vector2(122.5, 121)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wgjcq"]
+bg_color = Color(0.843184, 0.843184, 0.843184, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.695503, 0.695503, 0.695503, 1)
+border_blend = true
+corner_radius_top_left = 33
+corner_radius_bottom_right = 33
+
+[node name="Node2D" type="Node2D" unique_id=500612249]
+
+[node name="domek" type="Sprite2D" parent="." unique_id=369115046]
+position = Vector2(571, 329)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("1_pdmda")
+
+[node name="drzwifront" type="Area2D" parent="." unique_id=1827104411]
+position = Vector2(8, 6)
+script = ExtResource("2_idohv")
+
+[node name="Sprite2D2" type="Sprite2D" parent="drzwifront" unique_id=1008916918]
+position = Vector2(299, 399)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("3_he4n6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="drzwifront" unique_id=447323940]
+position = Vector2(294.5, 404)
+shape = SubResource("RectangleShape2D_3vc31")
+
+[node name="gosciu1" type="Area2D" parent="." unique_id=2026944396]
+script = ExtResource("4_r10qw")
+
+[node name="gosc1" type="Sprite2D" parent="gosciu1" unique_id=508651410]
+position = Vector2(757, 160)
+scale = Vector2(0.57874, 0.572)
+texture = ExtResource("5_1p4j6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gosciu1" unique_id=1655562315]
+position = Vector2(759, 152)
+shape = SubResource("RectangleShape2D_jyuat")
+
+[node name="PopupMenu" type="PopupMenu" parent="." unique_id=1629915057]
+size = Vector2i(200, 100)
+min_size = Vector2i(150, 0)
+theme_override_colors/font_color = Color(0.144063, 0.144063, 0.144063, 1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_wgjcq")
+script = ExtResource("6_5ob16")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=578126395]
+position = Vector2(571, 322)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1312590650]
+layer = 10
+visible = false
+
+[node name="DIalog" parent="UI" unique_id=353726640 instance=ExtResource("7_idohv")]
+
+[connection signal="mouse_entered" from="drzwifront" to="drzwifront" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="drzwifront" to="drzwifront" method="_on_mouse_exited"]
