@@ -1,0 +1,29 @@
+78098b89c88a74ebe8c20117b8754620
+::res://::1783420279
+README.md::TextFile::-1::1783343296::0::1::::<><><>0<>0<><>::
+::res://obrazki/::1783422771
+arrow.png::CompressedTexture2D::5358189811925254004::1783422771::1783422772::1::::<><><>0<>0<>4fb4da6cade768a6d8f8e0e81f849d5c<>res://.godot/imported/arrow.png-8cd0baacf17f2fa9d7a66bf010ef789e.ctex::
+box.png::CompressedTexture2D::7652212375043597352::1783421389::1783421394::1::::<><><>0<>0<>15cd286ba92d8b1b4984ef58ba892b73<>res://.godot/imported/box.png-fe02e3103ae1d00fb1c9dd28cd8f034c.ctex::
+drzwi front.png::CompressedTexture2D::6104278662757366637::1783343296::1783344526::1::::<><><>0<>0<>a2c7e413a8b7c43c227cf01fa6823cc0<>res://.godot/imported/drzwi front.png-3f5b19c375c1437f9d129da1785ac7d7.ctex::
+drzwikuchnia.png::CompressedTexture2D::2750913405575654764::1783343296::1783344526::1::::<><><>0<>0<>5db71ea6d7080840888b7695c7b80434<>res://.godot/imported/drzwikuchnia.png-5ec8f5a02c53094da85f034ab914c972.ctex::
+front.png::CompressedTexture2D::2500836809354824881::1783343296::1783344526::1::::<><><>0<>0<>474f0c8bc236552d89202393bf04d7f4<>res://.godot/imported/front.png-8730aa846a520850272539233a9e95dc.ctex::
+gosc1.png::CompressedTexture2D::1712777458309461671::1783343296::1783344526::1::::<><><>0<>0<>e06e3f7f530f0893238b334043d338b6<>res://.godot/imported/gosc1.png-a22026978028a6089991011b813bbf86.ctex::
+gosc2.png::CompressedTexture2D::1085584744735594569::1783343296::1783344526::1::::<><><>0<>0<>73338e1067cab82f88c7c141ade53829<>res://.godot/imported/gosc2.png-35737750a0b279b13acd14761277ce8b.ctex::
+hol.png::CompressedTexture2D::8327778158765079010::1783343296::1783344526::1::::<><><>0<>0<>99d2642727901a4e415109ec5d8a6ed1<>res://.godot/imported/hol.png-07cc86259ac46596da20dee85e2005fa.ctex::
+wyjscie.png::CompressedTexture2D::5113957492171983546::1783343296::1783344526::1::::<><><>0<>0<>75ba7b499c859ab9a80b1307c3b48996<>res://.godot/imported/wyjscie.png-8e4319dd92b08a50a8dde350f57ee45e.ctex::
+::res://src/::1783347913
+canvas_layer.gd::GDScript::8664051941067691842::1783343296::0::1::::<>CanvasLayer<><>0<>0<><>::
+canvas_layer.tscn::PackedScene::6949938480874670967::1783343296::0::1::::<><><>0<>0<><>::uid://dvo6w1dmdlrqw::::res://src/canvas_layer.gd
+control.tscn::PackedScene::6142384634314442423::1783343296::0::1::::<><><>0<>0<><>::
+dom_out.tscn::PackedScene::3866499346544962598::1783347913::0::1::::<><><>0<>0<><>::uid://bbvoof51ytme8::::res://obrazki/front.png<>uid://byujm8oroi4g3::::res://src/drzwifront.gd<>uid://cs77tv4crrjuj::::res://obrazki/drzwi front.png<>uid://wjaibnfepycj::::res://src/gosciu_1.gd<>uid://ynxgu3tjatv8::::res://obrazki/gosc1.png<>uid://33s42qdv05jw::::res://src/Popup_Menu.gd
+drzwifront.gd::GDScript::4112810124238106396::1783347913::0::1::::<>Area2D<><>0<>0<><>::
+drzwikuchnia.gd::GDScript::3381842132207628515::1783347909::0::1::::<>Area2D<><>0<>0<><>::
+gosciu_1.gd::GDScript::1562748319013436997::1783343296::0::1::::<>Area2D<><>0<>0<><>::
+gosciu_2.gd::GDScript::1610135304956346902::1783343296::0::1::::<>Area2D<><>0<>0<><>::
+hol_scene.tscn::PackedScene::405663748174174653::1783347685::0::1::::<><><>0<>0<><>::uid://dqwbj30kqjyq1::::res://obrazki/hol.png<>uid://boggpfmw34csp::::res://src/drzwikuchnia.gd<>uid://bfgte3akqh6ds::::res://obrazki/drzwikuchnia.png<>uid://ce4ierpd7caw5::::res://obrazki/wyjscie.png<>uid://pp4ol81ynm22::::res://obrazki/gosc2.png<>uid://bxvwd8x86kdtr::::res://src/wyjscie.gd<>uid://w67xtmw04hra::::res://src/gosciu_2.gd<>uid://33s42qdv05jw::::res://src/Popup_Menu.gd
+ludkimenu.gd::GDScript::7196055781639096659::1783343296::0::1::::<>Area2D<><>0<>0<><>::
+Main.gd::GDScript::4465344154376257131::1783343296::0::1::::<>RefCounted<><>0<>0<><>::
+panel.gd::GDScript::7143350294680850661::1783343296::0::1::::<>Panel<><>0<>0<><>::
+Popup_Menu.gd::GDScript::2024236335884330296::1783343296::0::1::::<>PopupMenu<><>0<>0<><>::
+sygnaly.gd::GDScript::1954676652385653478::1783343296::0::1::::<>Node<><>0<>0<><>::
+wyjscie.gd::GDScript::4045458921767926979::1783347904::0::1::::<>Area2D<><>0<>0<><>::
