@@ -1,13 +1,11 @@
-
-extends "res://src/ludkimenu.gd"
-var day = 1
-var Speaker = "Gosciu 2"
-
+extends "res://src/npc.gd"
+var day = GameLoop.current_day
+	
 func talk():
-	DialogManager.display_line(Speaker,day,"o kurwa FBI")
+	DialogManager.display_line(npc_name,day,"o kurwa FBI")
 
 func help():
-	DialogManager.display_line(Speaker,day,"czy chcesz pomoc gosciowi2 w holu")
+	DialogManager.display_line(npc_name,day,"czy chcesz pomoc gosciowi2 w holu")
 
 func order():
-	DialogManager.display_line(Speaker,day, "co ma zrobic gosciu2?")
+	DialogManager.display_line(npc_name,day, "co ma zrobic gosciu2?")

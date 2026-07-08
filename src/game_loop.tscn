@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://b1kuwaurs2as3"]
+
+[ext_resource type="Script" uid="uid://bfpn7g13hkdpf" path="res://src/game_loop.gd" id="1_5twum"]
+[ext_resource type="Texture2D" uid="uid://cilsurqrerb5m" path="res://obrazki/arrow.png" id="2_qw715"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rha72"]
+texture = ExtResource("2_qw715")
+modulate_color = Color(0.97472435, 0.7608513, 0.75786185, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fhpud"]
+texture = ExtResource("2_qw715")
+modulate_color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+
+[node name="GameLoop" type="CanvasLayer" unique_id=624145572]
+script = ExtResource("1_5twum")
+
+[node name="Button" type="Button" parent="." unique_id=2075627052]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -108.0
+offset_top = -58.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rha72")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_fhpud")
+icon = ExtResource("2_qw715")
+
+[node name="Day" type="Label" parent="." unique_id=788899480]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -70.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "DAY : "
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

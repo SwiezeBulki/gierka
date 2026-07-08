@@ -21,7 +21,9 @@ config/features=PackedStringArray("4.7", "Forward Plus")
 [autoload]
 
 Sygnaly="*res://src/sygnaly.gd"
+GameLoop="*uid://b1kuwaurs2as3"
 DialogManager="*uid://4esfsqcj053j"
+NpcManager="*uid://bj5fqmxvnplbj"
 UiNotes="*uid://fivqeared447"
 
 [input]
