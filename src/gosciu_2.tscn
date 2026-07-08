@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dhquuuh8o3pow"]
+
+[ext_resource type="Script" uid="uid://w67xtmw04hra" path="res://src/gosciu_2.gd" id="1_4r1eh"]
+[ext_resource type="Texture2D" uid="uid://pp4ol81ynm22" path="res://obrazki/gosc2.png" id="2_edush"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rha72"]
+size = Vector2(186, 186)
+
+[node name="gosciu2" type="Area2D" unique_id=1002868875]
+z_index = 3
+priority = 1
+script = ExtResource("1_4r1eh")
+npc_name = "Gosc2"
+current_room_name = "Hol"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1269499317]
+scale = Vector2(0.605058, 0.681818)
+texture = ExtResource("2_edush")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=729155235]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_rha72")

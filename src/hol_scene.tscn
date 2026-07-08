@@ -1,12 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://f1rhtnug7aa4"]
+[gd_scene format=3 uid="uid://f1rhtnug7aa4"]
 
 [ext_resource type="Texture2D" uid="uid://dqwbj30kqjyq1" path="res://obrazki/hol.png" id="1_aypnr"]
+[ext_resource type="Script" uid="uid://mno2gwbkihdy" path="res://src/hol_scene.gd" id="1_q5okb"]
 [ext_resource type="Script" uid="uid://boggpfmw34csp" path="res://src/drzwikuchnia.gd" id="2_h84ix"]
 [ext_resource type="Texture2D" uid="uid://bfgte3akqh6ds" path="res://obrazki/drzwikuchnia.png" id="2_nsf07"]
 [ext_resource type="Texture2D" uid="uid://ce4ierpd7caw5" path="res://obrazki/wyjscie.png" id="3_y63nr"]
-[ext_resource type="Texture2D" uid="uid://pp4ol81ynm22" path="res://obrazki/gosc2.png" id="4_h84ix"]
 [ext_resource type="Script" uid="uid://bxvwd8x86kdtr" path="res://src/wyjscie.gd" id="4_q5okb"]
-[ext_resource type="Script" uid="uid://w67xtmw04hra" path="res://src/gosciu_2.gd" id="6_fhpud"]
 [ext_resource type="Script" uid="uid://33s42qdv05jw" path="res://src/Popup_Menu.gd" id="8_q5okb"]
 [ext_resource type="PackedScene" uid="uid://4esfsqcj053j" path="res://src/dialog.tscn" id="9_fhpud"]
 
@@ -15,9 +14,6 @@ size = Vector2(2.62125, 0.711875)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q5okb"]
 size = Vector2(104, 403.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rha72"]
-size = Vector2(186, 186)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fhpud"]
 bg_color = Color(0.843184, 0.843184, 0.843184, 1)
@@ -30,65 +26,62 @@ border_blend = true
 corner_radius_top_left = 33
 corner_radius_bottom_right = 33
 
-[node name="Node2D" type="Node2D"]
+[node name="Hol_scene" type="Node2D" unique_id=1766721927]
 position = Vector2(-105, 40)
+script = ExtResource("1_q5okb")
+room_name = "Hol"
 
-[node name="hol" type="Sprite2D" parent="."]
+[node name="hol" type="Sprite2D" parent="." unique_id=454839597]
 z_index = -1
 position = Vector2(699.7, 241.7)
 scale = Vector2(1.1, 1.1)
 texture = ExtResource("1_aypnr")
 
-[node name="wyjscie" type="Area2D" parent="."]
+[node name="wyjscie" type="Area2D" parent="." unique_id=1487467385]
 script = ExtResource("4_q5okb")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="wyjscie"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="wyjscie" unique_id=632863312]
 position = Vector2(684, 564)
 scale = Vector2(200, 200)
 shape = SubResource("RectangleShape2D_fhpud")
 
-[node name="wyjscie_sprite" type="Sprite2D" parent="wyjscie"]
+[node name="wyjscie_sprite" type="Sprite2D" parent="wyjscie" unique_id=50934101]
 visibility_layer = 4
 z_index = 3
 position = Vector2(707, 564)
 scale = Vector2(1.12457, 1.20522)
 texture = ExtResource("3_y63nr")
 
-[node name="drzwikuchnia" type="Area2D" parent="."]
+[node name="drzwikuchnia" type="Area2D" parent="." unique_id=1696711619]
 position = Vector2(385.7, 327.7)
 script = ExtResource("2_h84ix")
 
-[node name="drzwi_sprite" type="Sprite2D" parent="drzwikuchnia"]
+[node name="drzwi_sprite" type="Sprite2D" parent="drzwikuchnia" unique_id=1025720237]
 position = Vector2(-10.95, 2.29999)
 scale = Vector2(1.0102, 1)
 texture = ExtResource("2_nsf07")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="drzwikuchnia"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="drzwikuchnia" unique_id=549112367]
 position = Vector2(-4, 1)
 shape = SubResource("RectangleShape2D_q5okb")
 
-[node name="gosciu2" type="Area2D" parent="."]
-script = ExtResource("6_fhpud")
-
-[node name="Sprite2D" type="Sprite2D" parent="gosciu2"]
-position = Vector2(797.7, 407.7)
-scale = Vector2(0.605058, 0.681818)
-texture = ExtResource("4_h84ix")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="gosciu2"]
-position = Vector2(799.7, 396.7)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_rha72")
-
-[node name="PopupMenu" type="PopupMenu" parent="."]
+[node name="PopupMenu" type="PopupMenu" parent="." unique_id=156487697]
 size = Vector2i(200, 100)
 min_size = Vector2i(150, 0)
 theme_override_colors/font_color = Color(0.144063, 0.144063, 0.144063, 1)
 theme_override_styles/panel = SubResource("StyleBoxFlat_fhpud")
 script = ExtResource("8_q5okb")
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="UI" type="CanvasLayer" parent="." unique_id=1670369137]
 layer = 10
 visible = false
 
-[node name="DIalog" parent="UI" instance=ExtResource("9_fhpud")]
+[node name="DIalog" parent="UI" unique_id=1658452068 instance=ExtResource("9_fhpud")]
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=976630645]
+
+[node name="Gosc2" type="Marker2D" parent="SpawnPoints" unique_id=1031701543]
+position = Vector2(844, 399)
+
+[node name="Gosc1" type="Marker2D" parent="SpawnPoints" unique_id=1739105957]
+position = Vector2(582, 377)

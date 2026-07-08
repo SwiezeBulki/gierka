@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bj5fqmxvnplbj"]
+
+[ext_resource type="Script" uid="uid://cu3fj68ujx0fg" path="res://src/npcManager.gd" id="1_6vcyd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5jdiy"]
+
+[node name="NPC" type="Node" unique_id=1224815500]
+script = ExtResource("1_6vcyd")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2044856631]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=927215108]
+shape = SubResource("RectangleShape2D_5jdiy")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1997996539]

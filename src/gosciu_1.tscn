@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://6uasbn2o5rwt"]
+
+[ext_resource type="Script" uid="uid://wjaibnfepycj" path="res://src/gosciu_1.gd" id="1_tt3dv"]
+[ext_resource type="Texture2D" uid="uid://ynxgu3tjatv8" path="res://obrazki/gosc1.png" id="2_2sxhl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jyuat"]
+size = Vector2(122.5, 121)
+
+[node name="gosciu1" type="Area2D" unique_id=2135766967]
+script = ExtResource("1_tt3dv")
+npc_name = "Gosc1"
+current_room_name = "DomOut"
+
+[node name="gosc1" type="Sprite2D" parent="." unique_id=1801315646]
+position = Vector2(-3.5000234, 10.5)
+scale = Vector2(0.57874, 0.572)
+texture = ExtResource("2_2sxhl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=962318535]
+position = Vector2(-1.5000839, 2.5)
+shape = SubResource("RectangleShape2D_jyuat")
