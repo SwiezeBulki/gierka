@@ -1,64 +1,103 @@
-extends CanvasLayer # Zmieniliśmy z Control na CanvasLayer
+extends CanvasLayer
 
-# Dodaliśmy "$NotebookUI/" przed każdą ścieżką, bo skrypt jest teraz wyżej w strukturze
 @onready var notebook_image = $NotebookUI/NotebookImage
 @onready var page_text = $NotebookUI/NotebookImage/PageText
 @onready var prev_button = $NotebookUI/NotebookImage/PrevButton
 @onready var next_button = $NotebookUI/NotebookImage/NextButton
 
-# Zmienne pozycji – teraz puste, bo uzupełni je kod
 var is_open = false
 var visible_position : Vector2
 var hidden_position : Vector2
 
-# Dane stron (bez zmian)
 var current_page = 0
-var pages = [
-	"witaj mój pamiętniczku!\npierwsza strona.",
-	"Druga strona.\n- dfgddfg\n- geddfg",
-	"Trzecia strona. hsdjhfdi..."
+
+var resources_data = [
+	{
+		"name": "Drewno",
+		"amount": 0,
+		"history": []
+	},
+	{
+		"name": "Metal",
+		"amount": 0,
+		"history": []
+	},
+	{
+		"name": "Jedzenie",
+		"amount": 0,
+		"history": []
+	}
 ]
 
 func _ready():
-	# 1. Kod automatycznie zapamiętuje pozycję, którą ustawiłeś myszką w edytorze!
 	visible_position = notebook_image.position
-	
-	# 2. Obliczamy pozycję ukrytą: bierzemy pozycję ze środka i przesuwamy ją w dół o np. 1000 pikseli
 	hidden_position = visible_position + Vector2(0, 1000)
-	
-	# 3. Na start gry chowamy notes na dół
 	notebook_image.position = hidden_position
 	
-	# Podłączamy sygnały (bez zmian)
 	prev_button.pressed.connect(_on_prev_pressed)
 	next_button.pressed.connect(_on_next_pressed)
+	
+	# --- PRZYKŁADY UŻYCIA Z POWODEM ---
+	modify_resource(0, 5, "tartak")      # Zobaczysz: +5 (tartak)
+	modify_resource(0, -2, "budowa domu") # Zobaczysz: -2 (budowa domu)
+	modify_resource(2, 10, "zbiory")     # Zobaczysz: +10 (zbiory)
+	
 	update_page()
 
 func _input(event):
-	# Sprawdzamy, czy wciśnięto klawisz "i"
 	if event.is_action_pressed("toggle_notebook"):
 		toggle_notebook()
 
 func toggle_notebook():
 	is_open = !is_open
 	var target_pos = visible_position if is_open else hidden_position
-	
-	# Tworzymy Tween dla płynnego wysunięcia/schowania
 	var tween = create_tween()
-	# Ustawiamy płynne przejście (Ease Out sprawia, że notes zwalnia na końcu)
 	tween.set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
-	# Animujemy właściwość "position" naszego TextureRect
 	tween.tween_property(notebook_image, "position", target_pos, 0.5)
 
 func update_page():
-	# Aktualizujemy tekst
-	page_text.text = pages[current_page]
+	var res = resources_data[current_page]
 	
-	# Wyłączamy lewy przycisk, jeśli to pierwsza strona
+	var page_content = "Surowiec: " + res["name"] + "\n"
+	page_content += "Ilość: " + str(res["amount"]) + "\n"
+	page_content += "-------------------\n"
+	page_content += "Historia zmian:\n"
+	
+	if res["history"].is_empty():
+		page_content += "(brak zmian)"
+	else:
+		for change in res["history"]:
+			page_content += change + "\n"
+			
+	page_text.text = page_content
+	
 	prev_button.disabled = (current_page == 0)
+	next_button.disabled = (current_page == resources_data.size() - 1)
+
+# --- ZMODYFIKOWANA FUNKCJA ---
+# Dopisaliśmy trzeci argument: reason (powód) jako String
+func modify_resource(resource_index: int, amount_change: int, reason: String = ""):
+	if resource_index < 0 or resource_index >= resources_data.size():
+		return
+		
+	var res = resources_data[resource_index]
+	res["amount"] += amount_change
 	
-	# Wyłączamy prawy przycisk, jeśli to ostatnia strona
-	next_button.disabled = (current_page == pages.size() - 1)
+	var sign_str = "+" if amount_change > 0 else ""
+	
+	# Tworzymy podstawowy wpis np. "+5"
+	var history_entry = sign_str + str(amount_change)
+	
+	# Jeśli podano powód, doklejamy go w nawiasie np. " (+5 (tartak))"
+	if reason != "":
+		history_entry += " (" + reason + ")"
+	
+	res["history"].insert(0, history_entry)
+	
+	if res["history"].size() > 5:
+		res["history"].resize(5)
+	
+	update_page()
 
 func _on_prev_pressed():
 	if current_page > 0:
@@ -66,6 +105,6 @@ func _on_prev_pressed():
 		update_page()
 
 func _on_next_pressed():
-	if current_page < pages.size() - 1:
+	if current_page < resources_data.size() - 1:
 		current_page += 1
 		update_page()

@@ -1,10 +1,10 @@
+Button
+CanvasLayer
+Sprite2D
 Marker2D
 Label
 Node2D
-CanvasLayer
-Button
 Node
-Sprite2D
 CollisionShape2D
 Area2D
 RichTextLabel

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cee2al1ceh4kv"]
+
+[ext_resource type="Script" uid="uid://cacxo1urrvrq0" path="res://order_menu.gd" id="1_hd2h8"]
+
+[node name="OrderMenu" type="CanvasLayer" unique_id=513855229]
+script = ExtResource("1_hd2h8")
+
+[node name="ButtonTartak" type="Button" parent="." unique_id=1661349895]
+offset_left = 628.0
+offset_top = 391.0
+offset_right = 687.0
+offset_bottom = 422.0
+text = "Tartak"
+
+[node name="ButtonWarsztat" type="Button" parent="." unique_id=1461087953]
+offset_left = 506.0
+offset_top = 395.0
+offset_right = 583.0
+offset_bottom = 426.0
+text = "Warsztat"
+
+[node name="ButtonLas" type="Button" parent="." unique_id=1340870059]
+anchors_preset = -1
+anchor_right = 0.015000001
+anchor_bottom = 0.048
+offset_left = 427.0
+offset_top = 397.0
+offset_right = 443.72
+offset_bottom = 396.896
+text = "Las"

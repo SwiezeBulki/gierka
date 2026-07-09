@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cmemsao1nkvxx"]
+
+[ext_resource type="Texture2D" uid="uid://bkm58gtf4q0is" path="res://obrazki/kuchnia.png" id="1_ggjog"]
+[ext_resource type="Script" uid="uid://byujm8oroi4g3" path="res://src/drzwifront.gd" id="2_8bkci"]
+[ext_resource type="Texture2D" uid="uid://dfyhtvu6jakvb" path="res://obrazki/holwyjscie.png" id="3_14iog"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_whf1y"]
+size = Vector2(123.5, 263)
+
+[node name="kuchnia" type="Node2D" unique_id=1326493730]
+
+[node name="kuchniasprite" type="Sprite2D" parent="." unique_id=307354284]
+position = Vector2(578.25, 322.12497)
+scale = Vector2(0.59921885, 0.59236115)
+texture = ExtResource("1_ggjog")
+
+[node name="drzwidohol" type="Area2D" parent="." unique_id=783961794]
+position = Vector2(8, 6)
+script = ExtResource("2_8bkci")
+
+[node name="Sprite2D2" type="Sprite2D" parent="drzwidohol" unique_id=700644461]
+position = Vector2(62, 362.00006)
+scale = Vector2(0.32172772, 0.35999012)
+texture = ExtResource("3_14iog")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="drzwidohol" unique_id=601393203]
+position = Vector2(59.75, 362.5)
+shape = SubResource("RectangleShape2D_whf1y")
+
+[connection signal="mouse_entered" from="drzwidohol" to="drzwidohol" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="drzwidohol" to="drzwidohol" method="_on_mouse_exited"]
