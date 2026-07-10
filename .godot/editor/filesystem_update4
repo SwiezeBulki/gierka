@@ -1,2 +1,12 @@
-res://src/order_menu.tscn
+res://src/Notes.gd
+res://src/gosciu_1.gd
+res://src/npcManager.gd
+res://src/npc.tscn
 res://src/dialog_theme.tres
+res://src/game_loop.tscn
+res://src/gosciu_1.tscn
+res://src/order_menu.tscn
+res://src/ui_notes.tscn
+res://src/kuchnia.tscn
+res://src/hol_scene.tscn
+res://src/dom_out.tscn

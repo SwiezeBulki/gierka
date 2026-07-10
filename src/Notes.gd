@@ -23,10 +23,25 @@ var resources_data = [
 		"history": []
 	},
 	{
-		"name": "Jedzenie",
+		"name": "elektryczne części",
 		"amount": 0,
 		"history": []
-	}
+	},
+	{
+		"name": "Gotowe posiłki",
+		"amount": 0,
+		"history": []
+	},
+	{
+		"name": "surowe składniki",
+		"amount": 0,
+		"history": []
+	},
+	{
+		"name": "Prąd",
+		"amount": 0,
+		"history": []
+	},
 ]
 
 func _ready():

@@ -27,4 +27,9 @@ func order():
 # Funkcja wywoływana przez menu, gdy gracz podejmie decyzję
 func disappear():
 	print(npc_name + " idzie do pracy i znika.")
+	
+	# Informujemy manager NPC, że ten konkretny NPC poszedł do pracy
+	if NpcManager.has_method("send_to_work"):
+		NpcManager.send_to_work(npc_name)
+	
 	queue_free()
