@@ -1,7 +1,5 @@
 extends CanvasLayer
-
-
-# Zmienna, która zapamięta, który NPC dostał rozkaz
+#Zmienna, która zapamięta, który NPC dostał rozkaz
 var npc_reference = null
 
 @onready var lumbermill_btn = $ButtonTartak
@@ -18,19 +16,37 @@ func _on_job_selected(job_type: String):
 		queue_free()
 		return
 
-	# Losowanie liczby surowców od 4 do 6
-	var random_amount = randi_range(4, 6)
+	# Losujemy bazową liczbę surowców (np. od 3 do 5)
+	var base_amount = randi_range(3, 5)
+	var final_amount = base_amount
 
 	match job_type:
 		"tartak":
-			# 0 = Drewno (zgodnie z poprzednim skryptem)
-			UiNotes.modify_resource(0, random_amount, "tartak")
+			# Wpływa SIŁA (strength)
+			var bonus = npc_reference.strength if "strength" in npc_reference else 0
+			final_amount += bonus
+			
+			# 0 = Drewno
+			UiNotes.modify_resource(0, final_amount, "tartak")
+			print("Tartak: Bazowo ", base_amount, " + Sila ", bonus, " = ", final_amount)
+
 		"warsztat":
+			# Wpływa ZRĘCZNOŚĆ (dexterity)
+			var bonus = npc_reference.dexterity if "dexterity" in npc_reference else 0
+			final_amount += bonus
+			
 			# 1 = Metal
-			UiNotes.modify_resource(1, random_amount, "warsztat")
+			UiNotes.modify_resource(1, final_amount, "warsztat")
+			print("Warsztat: Bazowo ", base_amount, " + Zrecznosc ", bonus, " = ", final_amount)
+
 		"las":
-			# 2 = Jedzenie (np. zbieractwo w lesie)
-			UiNotes.modify_resource(2, random_amount, "las")
+			# Wpływa WYTRZYMAŁOŚĆ (endurance)
+			var bonus = npc_reference.endurance if "endurance" in npc_reference else 0
+			final_amount += bonus
+			
+			# 2 = Jedzenie
+			UiNotes.modify_resource(2, final_amount, "las")
+			print("Las: Bazowo ", base_amount, " + Wytrzymalosc ", bonus, " = ", final_amount)
 
 	# Każe NPC zniknąć ze świata
 	npc_reference.disappear()

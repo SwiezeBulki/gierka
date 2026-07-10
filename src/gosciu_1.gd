@@ -1,5 +1,9 @@
 extends "res://src/npc.gd"
 var day = GameLoop.current_day
+var strength: int = 2      # Siła (Tartak)
+var dexterity: int = 4     # Zręczność (Warsztat)
+var endurance: int = 1     # Wytrzymałość (Las)5)
+var inteligence : int = 1 
 
 func talk():
 	DialogManager.display_line(npc_name, day, "o siema")
