@@ -11,6 +11,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 3.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -31,6 +35,85 @@ mouse_filter = 0
 texture = ExtResource("2_4jdak")
 expand_mode = 1
 
+[node name="CharacterPage" type="Control" parent="NotebookUI/NotebookImage" unique_id=1970076222]
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 447.0
+offset_bottom = 599.0
+
+[node name="CharTexture" type="TextureRect" parent="NotebookUI/NotebookImage/CharacterPage" unique_id=1032045709]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.13000001
+anchor_top = 0.081
+anchor_right = 0.455
+anchor_bottom = 0.344
+offset_left = -3.9800034
+offset_top = -2.4379997
+offset_right = 2.069992
+offset_bottom = -0.7120056
+
+[node name="CharName" type="Label" parent="NotebookUI/NotebookImage/CharacterPage/CharTexture" unique_id=1978703711]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.6290001
+anchor_bottom = 0.14500001
+offset_right = 0.020996094
+offset_bottom = -0.055002213
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="CharStats" type="Label" parent="NotebookUI/NotebookImage/CharacterPage/CharTexture" unique_id=456942969]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.3770001
+anchor_right = 2.311
+anchor_bottom = 1.0
+offset_left = 0.07298279
+offset_right = 0.038970947
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="CharBackstory" type="Label" parent="NotebookUI/NotebookImage/CharacterPage/CharTexture" unique_id=882017505]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.9180001
+anchor_right = 2.1660001
+anchor_bottom = 2.969
+offset_top = 0.037994385
+offset_right = -0.06600952
+offset_bottom = -0.071014404
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="AddTestNpcButton" type="Button" parent="NotebookUI/NotebookImage" unique_id=1953543509]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.312
+anchor_right = -0.13900001
+anchor_bottom = 0.09200001
+offset_left = 12.346695
+offset_right = 0.0807457
+offset_bottom = -0.19586182
+text = "dodaje 
+goscia"
+
+[node name="RemoveNpcButton" type="Button" parent="NotebookUI/NotebookImage" unique_id=1237186363]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.2290001
+anchor_right = 1.478
+anchor_bottom = 0.148
+offset_left = 0.09906006
+offset_top = 5.0
+offset_right = -0.11035156
+offset_bottom = 0.20666504
+text = "usuwa goscia"
+
 [node name="PageText" type="RichTextLabel" parent="NotebookUI/NotebookImage" unique_id=432530998]
 layout_mode = 1
 anchors_preset = -1
@@ -38,10 +121,10 @@ anchor_left = 0.078
 anchor_top = 0.13800001
 anchor_right = 0.92600006
 anchor_bottom = 0.777
-offset_left = -22.559677
-offset_top = 31.444206
-offset_right = -22.375793
-offset_bottom = 31.476135
+offset_left = 13.163315
+offset_top = 26.206207
+offset_right = -17.375793
+offset_bottom = 56.476105
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 
 [node name="PrevButton" type="Button" parent="NotebookUI/NotebookImage" unique_id=912496074]

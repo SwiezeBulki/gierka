@@ -1,14 +1,14 @@
 Button
+Label
+TextureRect
+Control
 CanvasLayer
 Sprite2D
 Marker2D
-Label
 Node2D
 Node
 CollisionShape2D
 Area2D
 RichTextLabel
-TextureRect
-Control
 CanvasGroup
 HBoxContainer

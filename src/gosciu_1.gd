@@ -1,17 +1,18 @@
 extends "res://src/npc.gd"
 var day = GameLoop.current_day
+var NPCname = ("gosciu1")
 var strength: int = 2      # Siła (Tartak)
 var dexterity: int = 4     # Zręczność (Warsztat)
 var endurance: int = 1     # Wytrzymałość (Las)5)
 var inteligence : int = 1 
-
+var backstory: = ("jakies przykladowe backstory")
 func talk():
 	DialogManager.display_line(npc_name, day, "o siema")
 	print("o siema")
 
 func help():
 	DialogManager.display_line(npc_name, day, "czy chcesz pomoc gosciowi na dachu?")
-	print("czy chcesz pomoc gosciowi na dachu?")
+	print("czy chcsz pomoc gosciowi na dachu?")
 
 func order():
 	DialogManager.display_line(npc_name, day, "co ma zrobic gosciu?")
