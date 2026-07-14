@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1784067711
+::res://::1784068443
 export_presets.cfg::TextFile::-1::1783435148::0::1::::<><><>0<>0<><>::
 order_menu.gd::GDScript::4778393012141776469::1784067695::0::1::::<>CanvasLayer<><>0<>0<><>::
 README.md::TextFile::-1::1783545719::0::1::::<><><>0<>0<><>::
@@ -17,13 +17,12 @@ kuchnia.png::CompressedTexture2D::3114962438861971382::1783595604::1783595609::1
 notes.png::CompressedTexture2D::3306316169227639922::1783433019::1783436347::1::::<><><>0<>0<>2f9375f11dda1e6c46fcd5f9aa731f69<>res://.godot/imported/notes.png-ed8a52a60484db4a6fc7c7ca56ee2e06.ctex::
 wyjscie.png::CompressedTexture2D/CompressedTexture2D::5113957492171983546::1783431413::1783431513::1::::<><><>0<>0<>2781397edfb1ad8f355193e7fb93175a<>res://.godot/imported/wyjscie.png-8e4319dd92b08a50a8dde350f57ee45e.ctex::
 ::res://sceny/::1783594215
-::res://src/::1784067695
-canvas_layer.gd::GDScript::8664051941067691842::1784067695::0::1::::<>CanvasLayer<><>0<>0<><>::
-canvas_layer.tscn::PackedScene::6949938480874670967::1784067695::0::1::::<><><>0<>0<><>::uid://dvo6w1dmdlrqw::::res://src/canvas_layer.gd
-control.tscn::PackedScene::6142384634314442423::1784067695::0::1::::<><><>0<>0<><>::
+::res://src/::1784068434
+canvas_layer.tscn::PackedScene::8416268895158532127::1784068434::0::1::::<><><>0<>0<><>::
+control.tscn::PackedScene::5173206194411530213::1784068034::0::1::::<><><>0<>0<><>::
 dialog.tscn::PackedScene::2044836781599588433::1783431515::0::1::::<><><>0<>0<><>::uid://c4qwmtmcl1mvx::::res://src/dialog_script.gd<>uid://c6f61kddef1cx::::res://src/dialog_theme.tres<>uid://cilsurqrerb5m::::res://obrazki/arrow.png
 dialog_script.gd::GDScript::6842706096909731409::1783431413::0::1::::<>CanvasLayer<><>0<>0<><>::
-dialog_theme.tres::Theme::6960946596362585547::1784063261::0::1::::<><><>0<>0<><>::uid://dha124x87xnvs::::res://obrazki/box.png
+dialog_theme.tres::Theme::6960946596362585547::1784068434::0::1::::<><><>0<>0<><>::uid://dha124x87xnvs::::res://obrazki/box.png
 dom_out.gd::GDScript::7805166659417801501::1784067695::0::1::::<>Node2D<><>0<>0<><>::
 dom_out.tscn::PackedScene::3866499346544962598::1783685538::0::1::::<><><>0<>0<><>::uid://djg47po52afp2::::res://src/dom_out.gd<>uid://bbvoof51ytme8::::res://obrazki/front.png<>uid://byujm8oroi4g3::::res://src/drzwifront.gd<>uid://cs77tv4crrjuj::::res://obrazki/drzwi front.png<>uid://33s42qdv05jw::::res://src/Popup_Menu.gd<>uid://4esfsqcj053j::::res://src/dialog.tscn
 drzwifront.gd::GDScript::4112810124238106396::1783431413::0::1::::<>Area2D<><>0<>0<><>::
@@ -40,11 +39,9 @@ kuchnia.tscn::PackedScene::5624125773088688857::1783685529::0::1::::<><><>0<>0<>
 Main.gd::GDScript::4465344154376257131::1783431413::0::1::::<>RefCounted<><>0<>0<><>::
 Notes.gd::GDScript::442985548602547526::1784067695::0::1::::<>CanvasLayer<><>0<>0<><>::
 npc.gd::GDScript::7196055781639096659::1784066376::0::1::::<>Area2D<><>0<>0<><>::
-npc.tscn::PackedScene::3080384433506318335::1783685523::0::1::::<><><>0<>0<><>::uid://cu3fj68ujx0fg::::res://src/npcManager.gd
+npc.tscn::PackedScene::3080384433506318335::1784068372::0::1::::<><><>0<>0<><>::uid://cu3fj68ujx0fg::::res://src/npcManager.gd
 npcManager.gd::GDScript::6234742154493568668::1784067695::0::1::::<>Node<><>0<>0<><>::
 order_menu.tscn::PackedScene::5063494229777556885::1784067695::0::1::::<><><>0<>0<><>::uid://cacxo1urrvrq0::::res://order_menu.gd
-panel.gd::GDScript::7143350294680850661::1784067695::0::1::::<>Panel<><>0<>0<><>::
 Popup_Menu.gd::GDScript::2024236335884330296::1783431413::0::1::::<>PopupMenu<><>0<>0<><>::
-sygnaly.gd::GDScript::1954676652385653478::1784067695::0::1::::<>Node<><>0<>0<><>::
 ui_notes.tscn::PackedScene::368763080644514790::1783974519::0::1::::<><><>0<>0<><>::uid://gkt532egtn4a::::res://src/Notes.gd<>uid://bndusrfewfh11::::res://obrazki/notes.png
 wyjscie.gd::GDScript::4045458921767926979::1783431413::0::1::::<>Area2D<><>0<>0<><>::
